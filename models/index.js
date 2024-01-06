@@ -18,7 +18,7 @@ Category.hasMany(Product, {
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
   through: {
-    model: product_tag,
+    model: ProductTag,
     unique: false,
   },
   // Define an alias for when data is retrieved
@@ -28,7 +28,7 @@ Product.belongsToMany(Tag, {
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: {
-    model: product_tag,
+    model: ProductTag,
     unique: false,
   },
   // Define an alias for when data is retrieved
